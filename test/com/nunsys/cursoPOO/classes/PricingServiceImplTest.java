@@ -5,6 +5,7 @@ import com.nunsys.cursoPOO.interfaces.DataAccess;
 import com.nunsys.cursoPOO.interfaces.PricingService;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Matchers;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
@@ -46,6 +47,7 @@ public class PricingServiceImplTest {
         // Verificación
         assertNotNull(price);
         assertEquals(expectedPrice, price);
+        verify(mockDataAccess).getPriceBySku(Matchers.eq(GOOD_SKU));
         verify(mockDataAccess, times(1)).getPriceBySku(GOOD_SKU);
     }
 
