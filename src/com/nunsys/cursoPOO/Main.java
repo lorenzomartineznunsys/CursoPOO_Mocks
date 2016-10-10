@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ICoffeeMachine coffeeMachine = new CoffeMachine(7, 7);
+        ICoffeeMachine coffeeMachine = new CoffeMachine(10, 10);
         ShowCoffeeMachineStatus(coffeeMachine);
 
         while(true){
